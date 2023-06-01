@@ -40,6 +40,5 @@ TEST_F(AccountFixture, Welfare10) {
 
 TEST_F(AccountFixture, Welfare10After10Years) {
 	account.setInterest(10);
-	account.getBalanceAfterYears(3);
-	EXPECT_EQ(13310, account.getBalance());
+	EXPECT_EQ(13310, account.getBalanceAfterYears(3));
 }

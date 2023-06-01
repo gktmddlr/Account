@@ -31,11 +31,12 @@ public:
 	}
 	int getBalanceAfterYears(int n)
 	{
+		int predict = balance;
 		for(int i = 0; i < n; i++)
 		{
-			welfare();
+			predict = (predict * (1 + interest_ / 100));
 		}
-		return getBalance();
+		return predict;
 	}
 private:
 	double interest_ = 5;
